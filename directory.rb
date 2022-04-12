@@ -1,16 +1,33 @@
+#putting students into an array
+students = [
+  "Dr. Hannibal Lecter", 
+  "Darth Vader",
+  "Nurse Ratched", 
+  "Michael Coreleone", 
+  "Alex DeLarge",
+  "The Wicked Witch of the West", 
+  "Terminator", 
+  "Freddy Krueger",
+  "The Joker",
+  "Joffrey Baratheon", 
+  "Norman Bates"
+]
 
 
-students = ["Dr. Hannibal Lecter", "Darth Vader", "Nurse Ratched", 
-"Michael Coreleone", "Alex DeLarge",
-"The Wicked Witch of the West", "Terminator", "Freddy Krueger", "The Joker",
-"Joffrey Baratheon", "Norman Bates"]
+def print_header
+  puts "The students of Villains academy"
+  puts "-----------"
+end
 
-student_count = students.count
+def print(names)
+  names.each { |name| 
+    puts name}
+end
 
-puts "The students of Villains academy"
-puts "-----------"
+def print_footer(names)
+  puts "Overall we have #{names.count} great students"
+end
 
-students.each { |student| 
-  puts student}
-
-puts "Overall we have #{student_count} great students"
+print_header
+print(students)
+print_footer(students)
